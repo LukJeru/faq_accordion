@@ -1,9 +1,15 @@
-document.getElementById("first_button").onclick = myFunction;
+const headings = document.querySelectorAll('.subheading');
 
-function myFunction() {
-  if (document.getElementById("first_button").getAttribute('src') == "assets/images/icon-minus.svg") {
-    document.getElementById("first_button").src="assets/images/icon-plus.svg"
-  } else {
-    document.getElementById("first_button").src="assets/images/icon-minus.svg"
-  }
-}
+headings.forEach(item => {
+  item.addEventListener("click", function handleClick(event) {
+    if (event.target.getAttribute('src') == "assets/images/icon-minus.svg") {
+      event.target.src="assets/images/icon-plus.svg";
+      event.target.parentElement.style.border ="";
+      event.target.parentElement.nextElementSibling.style.display = "none";
+    } else {
+      event.target.src="assets/images/icon-minus.svg";
+      event.target.parentElement.style.border ="none";
+      event.target.parentElement.nextElementSibling.style.display = "inline-block";
+    }
+  });
+});
