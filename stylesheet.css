@@ -19,12 +19,13 @@ body {
   margin: 0 auto;
   position: relative;
   top: 9rem;
-  height: 30rem;
+  height: 32rem;
   width: 40%;
   background-color: var(--classic-white);
   border-radius: 1rem;
   z-index: 1;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  overflow: scroll;
 }
 
 header{
@@ -101,4 +102,25 @@ p{
   bottom: 4rem;
   font-size: .9rem;
   display:none;
+}
+
+@media screen and (max-width: 1000px) {
+  #container{
+    height: 35rem;
+  }
+  .subheading{
+    width: 75%;
+  }
+  .subheading img{
+    width: 1.4rem;
+    height: 1.4rem;
+    position: relative;
+    right: 1rem;
+  }
+  p {
+    font-size: .8rem;
+  }
+  h1{
+    font-size: 2rem;
+  }
 }
